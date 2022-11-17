@@ -17,20 +17,21 @@ const Layout: React.FC = (props: any) => {
             <>
               <Header />
               <div className='container'>
-                <Home name="Omar" />
+                <Home name="Rebeca" />
               </div>
             </>
           </React.Fragment>}
         />
         <Route path='/spanish' element={
           <React.Fragment>
-          <>
-            <Header />
-            <div className='container'>
-              <Home name="Rebeca" />
-            </div>
-          </>
-        </React.Fragment>} />
+            <>
+              <Header />
+              <div className='container'>
+                <Home name="Omar" />
+              </div>
+            </>
+          </React.Fragment>}
+        />
       </Routes>
     </Router>
   );

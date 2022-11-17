@@ -1,0 +1,16 @@
+{
+  "header": {
+    "title": "Portafolio",
+    "language-message": "Idioma",
+    "languages": [
+      {
+        "code": "en",
+        "name": "Inglés"
+      },
+      {
+        "code": "es",
+        "name": "Español"
+      }
+    ]
+  }
+}
