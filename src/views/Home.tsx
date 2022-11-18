@@ -2,7 +2,7 @@ import React from 'react';
 import Introduction from '../components/IntroductionComponent/Introduction';
 
 
-function TestComponent(props: any) {
+function Home(props: any) {
   return (
     <>
       <h1>Hello, {props.name}</h1>
@@ -11,4 +11,4 @@ function TestComponent(props: any) {
   );
 }
 
-export default TestComponent;
+export default Home;
