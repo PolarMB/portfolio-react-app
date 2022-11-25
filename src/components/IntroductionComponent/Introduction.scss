@@ -4,14 +4,66 @@
 
 .line{
   margin-top: 0.5%;
-  margin-left: 27rem;
+  margin-left: 28rem;
   height: 340px;
   border-left: 1px solid black;
   position: absolute;
 }
 
-@media only screen and (max-width: 576px) {
+.card_style {
+  border-radius: 35px !important;
+}
+
+.card_title {
+  margin: 0rem 2rem 0rem 2rem;
+  padding: 0.35rem 0rem 0.35rem 2rem;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: black;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.40) 0px 2px 4px, rgba(0, 0, 0, 0.05) 0px 0.5px 1px;
+}
+
+.main_container {
+  margin-top: 4vh;
+}
+
+.btn_dimensions {
+  width: 10rem;
+}
+
+.icon_position {
+  margin-top: -5%;
+  margin-right: 5%;
+}
+
+@media only screen and (min-width: 991px) {
+  .card_style {
+    margin-left: -5vw;
+    margin-right: 5vw;
+  }
+
+  .line{
+    margin-left: 26rem;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .line{
+    margin-left: 30rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
   .line{
     display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .card_style {
+    margin-top: 2vh;
   }
 }

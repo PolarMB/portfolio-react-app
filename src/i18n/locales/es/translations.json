@@ -12,5 +12,13 @@
         "name": "Español"
       }
     ]
+  },
+  "card" : {
+    "title": "Información Personal",
+    "job": "Puesto",
+    "city": "Ciudad",
+    "city-title": "Ciudad Autónoma de ",
+    "country": "País",
+    "age": "Edad"
   }
 }

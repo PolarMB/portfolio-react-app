@@ -12,5 +12,13 @@
         "name": "Spanish"
       }
     ]
+  },
+  "card" : {
+    "title": "Personal Information",
+    "job": "Job",
+    "city": "City",
+    "city-title": "Autonomous City of ",
+    "country": "Country",
+    "age": "Age"
   }
 }

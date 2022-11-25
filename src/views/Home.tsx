@@ -2,10 +2,9 @@ import React from 'react';
 import Introduction from '../components/IntroductionComponent/Introduction';
 
 
-function Home(props: any) {
+function Home() {
   return (
     <>
-      <h1>Hello, {props.name}</h1>
       <Introduction></Introduction>
     </>
   );

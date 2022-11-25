@@ -8,27 +8,23 @@ import {
 import Home from '../views/Home';
 import Header from '../components/HeaderComponent/Header';
 
-const Layout: React.FC = (props: any) => {
+const Layout: React.FC = () => {
   return (
     <Router>
       <Routes>
         <Route path='/' element={
           <React.Fragment>
             <>
-              <Header />
-              <div className='container'>
-                <Home name="Rebeca" />
-              </div>
+              <Header/>
+              <Home/>
             </>
           </React.Fragment>}
         />
         <Route path='/spanish' element={
           <React.Fragment>
             <>
-              <Header />
-              <div className='container'>
-                <Home name="Omar" />
-              </div>
+              <Header/>
+              <Home/>
             </>
           </React.Fragment>}
         />
