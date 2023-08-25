@@ -1,5 +1,9 @@
 export const calculateAge = (dateString) => {
 
+  if (dateString === null || dateString === undefined) {
+    return;
+  }
+
   const today = new Date();
   const splitDate = dateString.split('-');
 

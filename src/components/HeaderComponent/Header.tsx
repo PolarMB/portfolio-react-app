@@ -12,7 +12,6 @@ const HeaderComponent: React.FC = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' });
   const navigate = useNavigate();
 
-
   const changeLanguage = (lang: string) => {
     return (e: React.MouseEvent) => {
 

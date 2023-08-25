@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import CvPicture from '../../images/cvPicture.jpeg';
-import { calculateAge } from '../../utils/dateUtils'; 
+import { calculateAge } from '../../utils/dateUtils';
 import './Introduction.scss';
 import { Github, Linkedin } from '@styled-icons/bootstrap';
+import { fetchApplicant } from '../../service/applicantService';
+import Applicant from '../../model/Applicant';
 
 const Introduction: React.FC = () => {
 
   const { t } = useTranslation();
+  const [applicant, setApplicant] = useState<Applicant>();
+
+  const initializeComponent = async () => {
+    const fetchedApplicant = await fetchApplicant();
+    console.log(fetchedApplicant);
+    setApplicant(fetchedApplicant);
+  }
+
+  useEffect(() => {
+    initializeComponent();
+  }, [])
 
   return (
     <Container className='main_container'>
@@ -26,11 +39,11 @@ const Introduction: React.FC = () => {
           <Card className='card_style'>
             <Card.Body>
               <Card.Title className='card_title text-start'>{t('card.title')}</Card.Title>
-              <Card.Text as='h3'>Omar Vivenes</Card.Text>
-              <Card.Text><b>{t('card.job')}: </b>Omar Vivenes</Card.Text>
-              <Card.Text><b>{t('card.city')}: </b>{t('card.city-title')} Buenos Aires</Card.Text>
-              <Card.Text><b>{t('card.country')}: </b>Argentina</Card.Text>
-              <Card.Text><b>{t('card.age')}: </b>{calculateAge('1997-03-11')}</Card.Text>
+              <Card.Text as='h3'>{`${applicant?.name} ${applicant?.lastname}`}</Card.Text>
+              <Card.Text><b>{t('card.job')}: </b>{applicant?.jobTitle}</Card.Text>
+              <Card.Text><b>{t('card.city')}: </b>{t('card.city-title')}{` ${applicant?.city}`}</Card.Text>
+              <Card.Text><b>{t('card.country')}: </b>{applicant?.country}</Card.Text>
+              <Card.Text><b>{t('card.age')}: </b>{calculateAge(applicant?.birthday)}</Card.Text>
               <Row>
                 <Col>
                   <Button href='https://github.com/PolarMB?tab=repositories' target='_blank' variant='dark'
