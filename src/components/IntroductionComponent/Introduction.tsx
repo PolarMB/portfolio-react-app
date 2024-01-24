@@ -21,7 +21,7 @@ const Introduction: React.FC = () => {
 
   useEffect(() => {
     initializeComponent();
-  }, [])
+  }, []);
 
   return (
     <Container className='main_container'>
