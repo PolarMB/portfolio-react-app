@@ -14,8 +14,21 @@ const Introduction: React.FC = () => {
   const [applicant, setApplicant] = useState<Applicant>();
 
   const initializeComponent = async () => {
-    const fetchedApplicant = await fetchApplicant();
-    console.log(fetchedApplicant);
+    let fetchedApplicant = await fetchApplicant();
+  
+
+    if (!fetchedApplicant) {
+      fetchedApplicant = {
+        id: 1,
+        name: 'Omar',
+        lastname: 'Vivenes',
+        email: 'omarrgvm.97@gmail.com',
+        jobTitle: 'Fullstack Developer',
+        birthday: '1997-03-11',
+        city: 'Buenos Aires',
+        country: 'Argentina'
+      }
+    }
     setApplicant(fetchedApplicant);
   }
 
